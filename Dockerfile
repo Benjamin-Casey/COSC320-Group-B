@@ -1,6 +1,6 @@
 FROM php:7.4-fpm-alpine
 
-WORKDIR /var/www
+WORKDIR /var/www/backend
 
 RUN apk update && apk add \
     build-base \
@@ -13,6 +13,6 @@ RUN addgroup -g 1000 -S www && \
 
 USER www
 
-COPY --chown=www:www . /var/www/
+COPY --chown=www:www . /var/www/backend
 
 EXPOSE 900
