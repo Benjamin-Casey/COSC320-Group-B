@@ -33,13 +33,16 @@ services:
   # Wordpress
   wordpress:
     container_name: wordpress-site
+    build:
+      context: .
+      dockerfile: Dockerfile
     depends_on:
       - db
     image: wordpress:latest
     ports:
       - "8000:80"
     restart: always
-    volumes: ["./:/var/www/html/CollegeQ"]
+    volumes: ["./:/var/www/html"]
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
@@ -47,22 +50,22 @@ services:
     networks:
       - wpsite
   # React plugin
-  # plugin:
-  #   container_name: tree-water-monitor-plugin
-  #   build:
-  #     context: /usr/src/wordpress/CollegeQ/wp-content/plugins/TWM
-  #     dockerfile: Dockerfile
-  #   depends_on:
-  #     - wordpress
-  #   volumes:
-  #     - /app/node_modules
-  #     - /usr/src/wordpress//CollegeQ/wp-content/plugins/TWM:/app
-  #   ports:
-  #     - 3000:3000
-  #   stdin_open: true
-  #   environment:
-  #     - CHOKIDAR_USEPOLLING=true
-  #   command: npm start
+  plugin:
+    container_name: tree-water-monitor-plugin
+    build:
+      context: /TWM
+      dockerfile: Dockerfile
+    depends_on:
+      - wordpress
+    volumes:
+      - /app/node_modules
+      - /TWM:/app
+    ports:
+      - 3000:3000
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: npm start
 networks:
   wpsite:
 volumes:
