@@ -1,0 +1,69 @@
+{
+  "name": "twm",
+  "version": "1.0.0",
+  "description": "Plugin to allow access to data and statistics relating to the monitoring of tree water usage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --colors --watch --mode=development",
+    "prod": "webpack --progress --colors -p --config webpack.config.js --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benjamin-Casey/COSC320-Group-B.git"
+  },
+  "keywords": [
+    "wordpress",
+    "react",
+    "plugin",
+    "webpack"
+  ],
+  "author": "ICT International / University of New England",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Benjamin-Casey/COSC320-Group-B/issues"
+  },
+  "homepage": "https://github.com/Benjamin-Casey/COSC320-Group-B#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@reduxjs/toolkit": "^1.6.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "isomorphic-fetch": "^2.2.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "eslint": "^5.6.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-react": "^7.11.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}

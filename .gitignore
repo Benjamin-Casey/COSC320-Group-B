@@ -1,0 +1,16 @@
+# dependencies
+/node_modules
+
+# testing
+
+# production
+
+# misc
+*.log
+*.sql
+*.sqlite
+
+npm-debug.log*
+
+.metals
+.vscode
