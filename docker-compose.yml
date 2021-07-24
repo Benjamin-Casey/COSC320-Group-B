@@ -53,13 +53,13 @@ services:
   plugin:
     container_name: tree-water-monitor-plugin
     build:
-      context: /TWM
+      context: ./TWM
       dockerfile: Dockerfile
     depends_on:
       - wordpress
     volumes:
       - /app/node_modules
-      - /TWM:/app
+      - ./TWM:/app
     ports:
       - 3000:3000
     stdin_open: true

@@ -1,3 +1,3 @@
 FROM wordpress
 
-ADD ./TWM /usr/src/wordpress/wp-content/themes/TWM
+ADD ./TWM /var/www/html/wp-content/plugins/TWM
