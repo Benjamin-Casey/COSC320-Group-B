@@ -76,6 +76,7 @@ To get a local copy up and running follow these simple steps.
    ```sh
    git clone https://github.com/Benjamin-Casey/COSC320-Group-B.git
    ```
+
 2. Run docker container
    ```sh
    docker compose up -d
