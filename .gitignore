@@ -14,3 +14,4 @@ npm-debug.log*
 
 .metals
 .vscode
+.DS_Store
