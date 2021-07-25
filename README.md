@@ -71,15 +71,28 @@ To get a local copy up and running follow these simple steps.
   ```
 
 ### Installation
+1. Download [Local](https://localwp.com/) WordPress Development Tool.
 
-1. Clone the repo
+2. Create a new site in Local and clone the repo into the 'WP-Content' directory with this command:
    ```sh
    git clone https://github.com/Benjamin-Casey/COSC320-Group-B.git
    ```
 
-2. Run docker container
+3. Move into the 'plugins' directory and then into the 'TWM' plugin:
    ```sh
-   docker compose up -d
+   cd plugins/TWM
+   ```
+4. Install required modules:
+    ```sh
+   npm install
+   ```
+5. Then build the development version of app and watch for changes:
+   ```sh
+   npm run build
+   ```
+6. To build the production version of the app:
+    ```sh
+   npm run prod
    ```
 
 ## Usage
