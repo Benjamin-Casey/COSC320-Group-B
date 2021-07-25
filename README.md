@@ -73,9 +73,13 @@ To get a local copy up and running follow these simple steps.
 ### Installation
 1. Download [Local](https://localwp.com/) WordPress Development Tool.
 
-2. Create a new site in Local and clone the repo into the 'WP-Content' directory with this command:
+2. Create a new site in Local and clone the repo into the 'WP-Content' directory:
    ```sh
-   git clone https://github.com/Benjamin-Casey/COSC320-Group-B.git
+   git clone https://github.com/Benjamin-Casey/COSC320-Group-B.git .
+   ```
+   **Note:** To clone into the current working directory ensure the directory is empty by checking with:
+   ```sh
+   ls -a
    ```
 
 3. Move into the 'plugins' directory and then into the 'TWM' plugin:
