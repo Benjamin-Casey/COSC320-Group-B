@@ -1,0 +1,41 @@
+// override default colors
+$theme-colors: ("primary": rgb(252, 167, 167),
+    "secondary": rgb(54, 105, 122));
+
+$primary-color: #272727;
+$secondary-color:rgb(54, 105, 122);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+//mixin for transitions
+@mixin transition-ease {
+    transition: all 0.4s ease-in-out;
+}
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+        @return #000;
+    }
+
+    @else {
+        @return #fff;
+    }
+}
+
+.trans-hover {
+    @include transition-ease;
+
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+@mixin mediaNavLayoutSm {
+    @media screen and (min-width: 370px) {
+        @content;
+    }
+}

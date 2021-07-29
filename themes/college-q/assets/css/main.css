@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.trans-hover {
+  transition: all 0.4s ease-in-out; }
+  .trans-hover:hover {
+    color: #36697a; }
+
+body {
+  font-family: 'Roboto', 'Open Sans', sans-serif, serif; }
+
+body,
+html {
+  height: 100%; }
+
+ul {
+  list-style: none; }
+
+header {
+  height: 80%;
+  background: url("../img/header.jpg") center/cover no-repeat; }
+  header .row {
+    height: 100%; }
+  header .nav {
+    align-items: center;
+    justify-content: center; }
+    header .nav ul {
+      font-size: 2rem; }
+      header .nav ul li {
+        margin-bottom: 2em;
+        color: #4aaed0;
+        border-bottom: #fff 1px solid; }
+        header .nav ul li i {
+          margin-right: 1em;
+          color: #fff; }
+  header .sign-in {
+    align-items: center; }
+    header .sign-in .usr-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      header .sign-in .usr-icon i {
+        color: #fff; }
+    header .sign-in .sign-in-btn {
+      display: flex;
+      text-align: center;
+      margin: 2em 0 0 0;
+      padding: 0 11em; }
+      header .sign-in .sign-in-btn button {
+        background: #4aaed0;
+        border: none; }
+
+footer {
+  background: url("../img/footer.jpg") top/cover no-repeat;
+  height: 30%; }
+  footer ul.links {
+    margin: 4em;
+    padding: 0 5em; }
+    footer ul.links li.heading {
+      margin: 0 4em 0.8em 0;
+      padding-bottom: 2px;
+      border-bottom: 1px solid white;
+      color: #fff;
+      font-size: 14px; }
+    footer ul.links li.content {
+      margin-right: 4em;
+      color: #fff;
+      font-size: 12px;
+      padding-bottom: 0.5em; }
+      footer ul.links li.content a {
+        color: #fff;
+        text-decoration: none; }
+  footer ul.contacts {
+    margin: 4em;
+    padding: 0 5em; }
+    footer ul.contacts li.heading {
+      margin: 0 4em 0.8em 0;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #fff;
+      color: #fff;
+      font-size: 14px;
+      text-align: right; }
+    footer ul.contacts li.content {
+      margin-right: 4em;
+      color: white;
+      font-size: 12px;
+      padding: 0 0.3em 0.5em 0;
+      text-align: right; }
+      footer ul.contacts li.content a {
+        color: #fff;
+        text-decoration: none !important; }
+
+/*# sourceMappingURL=main.css.map */

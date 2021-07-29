@@ -1,0 +1,67 @@
+// @include media-breakpoint-up(sm) {}
+
+// @include mediaNavLayoutSm {
+//     .navbar {
+//         &-brand {
+//             margin-left: 3rem;
+//         }
+
+//         &-toggler {
+
+//             margin-right: 3rem;
+//         }
+
+//     }
+// }
+
+// @include media-breakpoint-up(md) {
+//     .navbar {
+//         background: none;
+
+//         &-brand {
+//             margin-left: 0 !important;
+//         }
+//     }
+
+//     .navbar-nav {
+//         display: flex;
+//         flex-flow: row wrap !important;
+//         align-items: center;
+//         justify-content: flex-end;
+
+//     }
+
+//     .nav-link {
+//         @include transition-ease;
+
+//         &:hover {
+//             border-left: none !important;
+//             border-right: none !important;
+//             margin-bottom: -1px;
+//             border-bottom: 1px solid $secondary-color;
+//         }
+//     }
+
+//     #showcase {
+//         display: flex;
+//         flex-flow: column wrap !important;
+//         align-items: center;
+//         justify-content: flex-end;
+
+//         h1 {
+//             font-size: 6rem;
+//         }
+
+//         .connect-btn {
+//             margin-top: 0;
+    
+//             .col-10{
+//                 padding-bottom: 0;
+//             }
+//         }
+//     }
+// }
+
+// @include media-breakpoint-up(lg) {}
+
+// @include media-breakpoint-up(xl) {}

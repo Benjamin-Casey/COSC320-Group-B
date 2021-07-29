@@ -17,6 +17,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Aleo&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&amp;display=swap"
+    />
+
 	<?php wp_head(); ?>
 </head>
 
@@ -25,35 +45,39 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'college-q' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$college_q_description = get_bloginfo( 'description', 'display' );
-			if ( $college_q_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $college_q_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'college-q' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	<header>
+      <div class="row">
+		  <?php
+		  wp_nav_menu( array(
+			  'theme_location' => 'primary',
+			  'container' => 'nav-list',
+			  'container_class' => 'col nav',
+			  'menu-class' => 'nav-list'
+		  ));
+		  ?>
+        <div class="col nav">
+          <ul class="nav-list">
+            <li href="#"><i class="fas fa-info"></i>ABOUT</li>
+            <li href="#"><i class="far fa-address-book"></i>CONTACT</li>
+            <li href="#"><i class="fas fa-question-circle"></i>FAQ</li>
+            <li href="#"><i class="fas fa-link"></i>LINKS</li>
+            <li href="#"><i class="fab fa-blogger-b"></i>BLOG</li>
+            <li href="#"><i class="fas fa-newspaper"></i>NEWS</li>
+            <li href="#"><i class="fas fa-lightbulb"></i>RESOURCES</li>
+          </ul>
+        </div>
+        <div class="col"></div>
+        <div class="col sign-in my-auto">
+          <div class="usr-icon">
+            <i class="fas fa-user fa-9x"></i>
+          </div>
+          <div class="sign-in-btn">
+            <button class="btn btn-primary w-100" type="submit">
+              Sign In
+            </button>
+          </div>
+          
+        </div>
+      </div>
+    </header>
+	

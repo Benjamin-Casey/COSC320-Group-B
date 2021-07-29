@@ -1,0 +1,50 @@
+header {
+  height: 80%;
+  background: url("../img/header.jpg") center / cover no-repeat;
+  .row {
+    height: 100%;
+  }
+  .nav {
+    // padding-top: 5em;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+      font-size: 2rem;
+      li {
+        margin-bottom: 2em;
+        color: rgb(74, 174, 208);
+        border-bottom: #fff 1px solid;
+        i {
+          margin-right: 1em;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .sign-in {
+    align-items: center;
+
+    .usr-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        color: #fff;
+      }
+      
+    }
+    .sign-in-btn {
+      display: flex;
+      text-align: center;
+      margin: 2em 0 0 0;
+      padding: 0 11em;
+      button {
+        background: rgb(74, 174, 208);
+        border: none;
+      }
+    }
+    
+    
+  }
+}
